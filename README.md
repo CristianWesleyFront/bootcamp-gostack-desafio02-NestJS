@@ -1,75 +1,100 @@
-<p align="center">
-  <a href="http://nestjs.com/" target="blank"><img src="https://nestjs.com/img/logo_text.svg" width="320" alt="Nest Logo" /></a>
-</p>
+# bootcamp-gostack-desafio02-NestJS
 
-[travis-image]: https://api.travis-ci.org/nestjs/nest.svg?branch=master
-[travis-url]: https://travis-ci.org/nestjs/nest
-[linux-image]: https://img.shields.io/travis/nestjs/nest/master.svg?label=linux
-[linux-url]: https://travis-ci.org/nestjs/nest
-  
-  <p align="center">A progressive <a href="http://nodejs.org" target="blank">Node.js</a> framework for building efficient and scalable server-side applications, heavily inspired by <a href="https://angular.io" target="blank">Angular</a>.</p>
-    <p align="center">
-<a href="https://www.npmjs.com/~nestjscore"><img src="https://img.shields.io/npm/v/@nestjs/core.svg" alt="NPM Version" /></a>
-<a href="https://www.npmjs.com/~nestjscore"><img src="https://img.shields.io/npm/l/@nestjs/core.svg" alt="Package License" /></a>
-<a href="https://www.npmjs.com/~nestjscore"><img src="https://img.shields.io/npm/dm/@nestjs/core.svg" alt="NPM Downloads" /></a>
-<a href="https://travis-ci.org/nestjs/nest"><img src="https://api.travis-ci.org/nestjs/nest.svg?branch=master" alt="Travis" /></a>
-<a href="https://travis-ci.org/nestjs/nest"><img src="https://img.shields.io/travis/nestjs/nest/master.svg?label=linux" alt="Linux" /></a>
-<a href="https://coveralls.io/github/nestjs/nest?branch=master"><img src="https://coveralls.io/repos/github/nestjs/nest/badge.svg?branch=master#5" alt="Coverage" /></a>
-<a href="https://gitter.im/nestjs/nestjs?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=body_badge"><img src="https://badges.gitter.im/nestjs/nestjs.svg" alt="Gitter" /></a>
-<a href="https://opencollective.com/nest#backer"><img src="https://opencollective.com/nest/backers/badge.svg" alt="Backers on Open Collective" /></a>
-<a href="https://opencollective.com/nest#sponsor"><img src="https://opencollective.com/nest/sponsors/badge.svg" alt="Sponsors on Open Collective" /></a>
-  <a href="https://paypal.me/kamilmysliwiec"><img src="https://img.shields.io/badge/Donate-PayPal-dc3d53.svg"/></a>
-  <a href="https://twitter.com/nestframework"><img src="https://img.shields.io/twitter/follow/nestframework.svg?style=social&label=Follow"></a>
-</p>
-  <!--[![Backers on Open Collective](https://opencollective.com/nest/backers/badge.svg)](https://opencollective.com/nest#backer)
-  [![Sponsors on Open Collective](https://opencollective.com/nest/sponsors/badge.svg)](https://opencollective.com/nest#sponsor)-->
+<h1 align="center">
+  <img src="https://camo.githubusercontent.com/d25397e9df01fe7882dcc1cbc96bdf052ffd7d0c/68747470733a2f2f73746f726167652e676f6f676c65617069732e636f6d2f676f6c64656e2d77696e642f626f6f7463616d702d676f737461636b2f6865616465722d6465736166696f732e706e67" width="85%"> 
+</h1>
 
-## Description
+<div align="center">
+<span align="center">
+  <img src="https://nestjs.com/img/logo_text.svg" width="150" alt="Nest Logo" />
+</span>
+<span align="center">
+  <img src="https://raw.githubusercontent.com/typeorm/typeorm/master/resources/logo_big.png" width="150" alt="typeOrm Logo" />
+</span>
+<span align="center">
+  <img src="https://www.sqlite.org/images/sqlite370_banner.gif" width="150" alt="SQLite" />
+</span>
+</div>
 
-[Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
+---
 
-## Installation
+## 🚀 Indice
+
+- 📓 [Sobre](#-Sobre)
+- 👨‍💻 [Tecnologias utilizadas](#-Tecnologias-utilizadas)
+- 📦 [Como baixar o projeto](#-Como-baixar-o-projeto)
+- 🤝 [Considerações](#-Considerações)
+
+## 📓 Sobre
+
+Referência do projeto [Desafio 02: Conceitos do Node.js](https://github.com/Rocketseat/bootcamp-gostack-desafios/tree/master/desafio-conceitos-nodejs) da [Rocketseat](https://github.com/Rocketseat)
+
+Essa será uma aplicação para armazenar repositórios do seu portfólio, que irá permitir a criação, listagem, atualização e remoção dos repositórios.
+
+É uma refatoração do desafio 02, com algumas poucas mudanças, utilizando o nest com typeorm e o banco de dados sqlite.
+
+### Rotas da aplicação
+
+- **POST /repositories**: A rota deve receber title, url e techs dentro do corpo da requisição, sendo a URL o link para o github desse repositório. Ao cadastrar um novo projeto, ele deve ser armazenado dentro de um objeto no seguinte formato: { id: "autoIncrement", title: 'Desafio Node.js', url: 'http://github.com/...', techs: "Node.js, ...", likes: 0 };
+
+- **GET /repositories**: Rota que lista todos os repositórios;
+
+- **PUT /repositories/:id**: A rota deve alterar apenas o title, a url e as techs do repositório que possua o id igual ao id presente nos parâmetros da rota;
+
+- **DELETE /repositories/:id**: A rota deve deletar o repositório com o id presente nos parâmetros da rota;
+
+# 👨‍💻 Tecnologias utilizadas
+
+- [NodeJs](https://nodejs.org/en/)
+- [NestJS](https://nestjs.com/)
+- [TypeScritp](https://www.typescriptlang.org/)
+- [TypeOrm](https://typeorm.io/#/)
+- [Sqlite](https://www.sqlite.org/index.html)
+
+---
+
+## 📦 Como baixar o projeto
+
+### Com [Yarn](https://yarnpkg.com/) :
 
 ```bash
-$ npm install
+
+ # Clonar o repositório
+ $ git clone https://github.com/CristianWesleyFront/bootcamp-gostack-desafio02-NestJS
+
+ # Entrar no diretorio
+ $ cd bootcamp-gostack-desafio02-NestJS
+
+ # Instalar as dependências
+ $ yarn install
+
+ # Iniciar o projeto
+ $ yarn dev
+
+
 ```
 
-## Running the app
+### Com [Npm](https://www.npmjs.com/) :
 
 ```bash
-# development
-$ npm run start
 
-# watch mode
-$ npm run start:dev
+ # Clonar o repositório
+ $ git clone https://github.com/CristianWesleyFront/bootcamp-gostack-desafio02-NestJS
 
-# production mode
-$ npm run start:prod
+ # Entrar no diretorio
+ $ cd bootcamp-gostack-desafio02-NestJS
+
+ # Instalar as dependências
+ $ npm i
+
+ # Iniciar o projeto
+ $ npm run dev
+
+
 ```
 
-## Test
+---
 
-```bash
-# unit tests
-$ npm run test
+## 🤝 Considerações
 
-# e2e tests
-$ npm run test:e2e
-
-# test coverage
-$ npm run test:cov
-```
-
-## Support
-
-Nest is an MIT-licensed open source project. It can grow thanks to the sponsors and support by the amazing backers. If you'd like to join them, please [read more here](https://docs.nestjs.com/support).
-
-## Stay in touch
-
-- Author - [Kamil Myśliwiec](https://kamilmysliwiec.com)
-- Website - [https://nestjs.com](https://nestjs.com/)
-- Twitter - [@nestframework](https://twitter.com/nestframework)
-
-## License
-
-  Nest is [MIT licensed](LICENSE).
+#### Ideia do projeto : https://github.com/Rocketseat/bootcamp-gostack-desafios/tree/master/desafio-conceitos-nodejs
